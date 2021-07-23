@@ -17,6 +17,13 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+/*You can think of this small file above like a big huge box. In this case that box has 2 more boxes inside of it. The original box is the global source meaning everything inside has access to it even though it can not access everything inside of it. Meaning, the inside boxes can reach outward but NOT inward. 
+
+Continuing this analogy, box 2 is myFunction() and box 3 is nestedFunction(). There is a console.log of the variable external inside of myFunction. When myFunction is invoked on line 16 it WILL be able to console.log(external) as "I'm outside the function" BECAUSE external is defined in the global scope which myFunction CAN reach OUT to get the globally declared variable (located in box 1 in this analogy). IF external was defined inside of nestedFunction, however, then myFunction would NOT be able to console.log(external) as it can NOT reach further IN to access a variable.
+
+Now, box 3 is nestedFunction() and contains a console.log of the variable internal. Since the declaration of the variable internal happens in box 2 which is now an open box since box 3 is open (we could not open box 3 unless we already opened box 2 first), nestedFunction() is able to reach OUT of itself to find the variable internal and then return a console.log() of "Hello! I'm inside myFunction!". There is a closure at console.log(internal) since the inside function will have to reach outside of itself to access the variable it wants to log.
+
+The point is that the functions can reach OUTSIDE of themselves to grab declared variables but they cannot reach further in. */
 
 
 
@@ -31,115 +38,115 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 function summation(/*Your Code Here*/) {
   /*Your Code Here*/
 
-  }
- 
+}
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
 
 const zooAnimals = [
-    { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
-    { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
-    { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
-    { animal_name: "White-cheeked pintail", population: 1, scientific_name: "Anas bahamensis", state: "Oregon" },
-    { animal_name: "Black-backed jackal", population: 2, scientific_name: "Canis mesomelas", state: "Washington" },
-    { animal_name: "Brolga crane", population: 9, scientific_name: "Grus rubicundus", state: "New Mexico" },
-    { animal_name: "Common melba finch", population: 5, scientific_name: "Pytilia melba", state: "Pennsylvania" },
-    { animal_name: "Pampa gray fox", population: 10, scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
-    { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
-    { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
-  ];
-  
-  /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
-  The zoos want to display both the scientific name and the animal name in front of the habitats. 
-  Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
-  displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
-  */
+  { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
+  { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
+  { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
+  { animal_name: "White-cheeked pintail", population: 1, scientific_name: "Anas bahamensis", state: "Oregon" },
+  { animal_name: "Black-backed jackal", population: 2, scientific_name: "Canis mesomelas", state: "Washington" },
+  { animal_name: "Brolga crane", population: 9, scientific_name: "Grus rubicundus", state: "New Mexico" },
+  { animal_name: "Common melba finch", population: 5, scientific_name: "Pytilia melba", state: "Pennsylvania" },
+  { animal_name: "Pampa gray fox", population: 10, scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
+  { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
+  { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
+];
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+/* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
+The zoos want to display both the scientific name and the animal name in front of the habitats. 
+Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
+displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
+*/
 
-  /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
-  The zoo needs a list of all their animal's names converted to lower case. 
-  Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
-  For example: ['jackal, asiatic', .....]
-  */
+function animalNames(/*Your Code Here*/) {
+  /*Your Code Here*/
+}
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
-  
-  /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
-  The zoo is concerned about animals with a lower population count. 
-  Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
-  */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+/* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
+The zoo needs a list of all their animal's names converted to lower case. 
+Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
+For example: ['jackal, asiatic', .....]
+*/
 
-  /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
-  The zoo needs to know their total animal population across the United States. 
-  Using USApop find the total population from the zoos array using the .reduce() method. 
-  Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
-  */
+function lowerCaseNames(/*Your Code Here*/) {
+  /*Your Code Here*/
+}
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
-  
-  // 🦁🦁🦁 Callbacks 🦁🦁🦁  
-  /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
-    * Use the higher-order function consume with 3 parameters: a, b and cb
-    * The first two parameters can take any argument (we can pass any value as an argument)
-    * The last parameter accepts a callback
-    * The consume function should return the invocation of cb, passing a and b into cb as arguments
-  */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
- 
-  
-  /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
- // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
-  
-function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
+/* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
+The zoo is concerned about animals with a lower population count. 
+Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
+*/
+
+function lowPopulationAnimals(/*Your Code Here*/) {
+  /*Your Code Here*/
+}
+
+
+/* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
+The zoo needs to know their total animal population across the United States. 
+Using USApop find the total population from the zoos array using the .reduce() method. 
+Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
+*/
+
+function USApop(/*Your Code Here*/) {
+  /*Your Code Here*/
+}
+
+
+// 🦁🦁🦁 Callbacks 🦁🦁🦁  
+/* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
+  * Use the higher-order function consume with 3 parameters: a, b and cb
+  * The first two parameters can take any argument (we can pass any value as an argument)
+  * The last parameter accepts a callback
+  * The consume function should return the invocation of cb, passing a and b into cb as arguments
+*/
+
+function consume(/*Your Code Here */) {
+  /*Your Code Here */
+}
+
+
+/* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
+// 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
+
+function add(/*Your Code Here */) {
+  /*Your Code Here*/
+}
 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
-  
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+
+function multiply(/*Your Code Here */) {
+  /*Your Code Here */
+}
 
 
- // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
-  
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
-  }
-  
-  
-  // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
-  // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+// 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
+
+function greeting(/*Your Code Here */) {
+  return /*Your Code Here */
+}
+
+
+// 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
+// ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
+// console.log(consume(2, 2, add)); // 4
+// console.log(consume(10, 16, multiply)); // 160
+// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
+function CuboidMaker(/*Your Code Here */) {
   /*Your Code Here */
 }
 
@@ -173,11 +180,11 @@ function CuboidMaker(/*Your Code Here */){
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
 // console.log(cuboid.volume()); // 100
 // console.log(cuboid.surfaceArea()); // 130
- 
+
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
+class CuboidMakerTwo {
 
 }
 
@@ -191,29 +198,29 @@ class CuboidMakerTwo{
 
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
-  
 
 
 
 
 
-  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
-  function foo(){
-    console.log('its working');
-    return 'bar';
-  }
-  foo();
-  module.exports = {
-    foo,
-    summation,
-    animalNames,
-    lowerCaseNames,
-    lowPopulationAnimals,
-    USApop,
-    consume, 
-    add,
-    multiply,
-    greeting,
-    CuboidMaker,
-    CuboidMakerTwo
-  }
+
+/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
+function foo() {
+  console.log('its working');
+  return 'bar';
+}
+foo();
+module.exports = {
+  foo,
+  summation,
+  animalNames,
+  lowerCaseNames,
+  lowPopulationAnimals,
+  USApop,
+  consume,
+  add,
+  multiply,
+  greeting,
+  CuboidMaker,
+  CuboidMakerTwo
+}

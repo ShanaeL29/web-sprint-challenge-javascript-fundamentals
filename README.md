@@ -26,7 +26,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
-    answer goes here
+    *answer goes here
 
 2. Explain the difference between a callback and a higher order function.
 
