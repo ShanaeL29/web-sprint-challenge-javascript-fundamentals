@@ -63,9 +63,15 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-function animalNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function animalNames(array) {
+  const displayNames = [];
+  array.forEach(function (item) {
+    displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+  });
+  return displayNames;
 }
+
+console.log(animalNames(zooAnimals));
 
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -108,7 +114,7 @@ function USApop(/*Your Code Here*/) {
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-function consume(/*Your Code Here */) {
+function consume() {
   /*Your Code Here */
 }
 
