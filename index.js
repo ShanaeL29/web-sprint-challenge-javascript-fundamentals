@@ -81,10 +81,10 @@ For example: ['jackal, asiatic', .....]
 */
 
 function lowerCaseNames(array) {
-  const newArray = array.map(function (item) {
+  const lowerCase = array.map(function (item) {
     return item.animal_name.toLowerCase();
   });
-  return newArray
+  return lowerCase;
 }
 
 console.log(lowerCaseNames(zooAnimals));
@@ -109,9 +109,14 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-function USApop(/*Your Code Here*/) {
-  /*Your Code Here*/
+function USApop(array) {
+  const totalPopulation = array.reduce(function (acc, item) {
+    return acc + item.population;
+  }, 0);
+  return totalPopulation;
 }
+
+console.log(USApop(zooAnimals));
 
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁  
