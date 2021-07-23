@@ -36,11 +36,15 @@ The point is that when a function is defined WITHIN another function, the inner 
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  let count = 0;
-  return
+  let result = 0;
+  for (let x = 1; x <= number; x++)
+    result += x;
+  return result;
 }
 
-// console.log(summation(4));
+console.log(summation(4));
+
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -75,6 +79,8 @@ function animalNames(array) {
 console.log(animalNames(zooAnimals));
 
 
+
+
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
 Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
@@ -90,6 +96,8 @@ function lowerCaseNames(array) {
 
 console.log(lowerCaseNames(zooAnimals));
 
+
+
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
 The zoo is concerned about animals with a lower population count. 
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
@@ -103,6 +111,8 @@ function lowPopulationAnimals(array) {
 }
 
 console.log(lowPopulationAnimals(zooAnimals));
+
+
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
 The zoo needs to know their total animal population across the United States. 
@@ -120,6 +130,8 @@ function USApop(array) {
 console.log(USApop(zooAnimals));
 
 
+
+
 // 🦁🦁🦁 Callbacks 🦁🦁🦁  
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
   * Use the higher-order function consume with 3 parameters: a, b and cb
@@ -131,7 +143,6 @@ console.log(USApop(zooAnimals));
 function consume(a, b, cb) {
   return cb(a, b)
 }
-
 
 
 

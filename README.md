@@ -51,8 +51,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 
     -   The first principle is window binding. When "this" is in the global scope it will return the window object. If none of the other rules apply "this" will default to the window. The window object is an error and we do not want this.
-    -   The next principle is implicit binding. In this principle "this" refers to the object to the left of the dot when a function is called.
-    -   The third principle of "this" is new binding. In this principal "this" refers to the newly created object that the constructor function creates. When we call the function we have to use the "new" keyword with the name of the constructor function.
+    -   The next principle is implicit binding. In this principle "this" applies to objects with methods and "this" refers to the object to the left of the dot when a function is called.
+    -   The third principle of "this" is new binding. In this principal "this" refers to/is bound to the newly created object that the constructor function creates. When we call the function we have to use the "new" keyword with the name of the constructor function.
     -   The last principle is explicit binding. In this principle "this" is explicitly bound when we use .call or .apply to bind an object.
 
 5. Why do we need super() in an extended class?
