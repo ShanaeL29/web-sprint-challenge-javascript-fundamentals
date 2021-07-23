@@ -23,7 +23,7 @@ Continuing this analogy, box 2 is myFunction() and box 3 is nestedFunction(). Th
 
 Now, box 3 is nestedFunction() and contains a console.log of the variable internal. Since the declaration of the variable internal happens in box 2 which is now an open box since box 3 is open (we could not open box 3 unless we already opened box 2 first), nestedFunction() is able to reach OUT of itself to find the variable internal and then return a console.log() of "Hello! I'm inside myFunction!". There is a closure at console.log(internal) since the inside function will have to reach outside of itself to access the variable it wants to log.
 
-The point is that the functions can reach OUTSIDE of themselves to grab declared variables but they cannot reach further in. */
+The point is that when a function is defined WITHIN another function, the inner function can reach OUTSIDE of itself to grab variables declared in the outer function because of lexical scoping but the outer function cannot reach into the inner functions. */
 
 
 
@@ -35,8 +35,9 @@ The point is that the functions can reach OUTSIDE of themselves to grab declared
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
-
+function summation(number) {
+  let count = 0;
+  return
 }
 
 // console.log(summation(4));

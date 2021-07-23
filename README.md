@@ -24,25 +24,43 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
+
+
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
-    *answer goes here
+
+    -   .map will return a brand new array without manipulating the original array and requires a return statment. You can use map when you want to convert data. Take the data, apply a rule in map, and return the results in a new array.
+    -   .filter will also return a new array without manipulating the original while requiring a return statement. You should use .filter when you want to filter data out based on a boolean value (either true or false). If true the data will be in the new array and if false the data will not be in the new array.
+    -   .reduce will return a single value. It will NOT return a new array. You can use .reduce anytime you want to reduce data down to a single value such as for multiplication or addition or getting an average based off the data.
+
+
 
 2. Explain the difference between a callback and a higher order function.
 
-    answer goes here
+
+    A higher order function receives other functions whereas a callback function is a function that is passed into another function as an argument.
+
 
 3. Explain what a closure is.
 
-    answer goes here
+
+    A closure is created when you create a function nested within another function. The inside function is the closure. The inside function can reach outside of itself to access variables it does not have access to directly inside its own scope.
+
 
 4. Describe the four principles of the 'this' keyword.
 
-    answer goes here
+
+    -   The first principle is window binding. When "this" is in the global scope it will return the window object. If none of the other rules apply "this" will default to the window. The window object is an error and we do not want this.
+    -   The next principle is implicit binding. In this principle "this" refers to the object to the left of the dot when a function is called.
+    -   The third principle of "this" is new binding. In this principal "this" refers to the newly created object that the constructor function creates. When we call the function we have to use the "new" keyword with the name of the constructor function.
+    -   The last principle is explicit binding. In this principle "this" is explicitly bound when we use .call or .apply to bind an object.
 
 5. Why do we need super() in an extended class?
 
-    answer goes here
+    The super keyword refers to the parent and calls the constructor of the parent class and gives the child access to all of the parent's properties and all of the parent's methods.
+
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
